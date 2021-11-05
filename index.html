@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuấn Anh</title>
+  <link rel="stylesheet" href="./style.css/css/main.css">
+  <link rel="stylesheet" href="/style.css/css/reponsive.css">
+  <link rel="stylesheet" href="./style.css/font/themify-icons.css">
+</head>
+
+<body>
+  <!-- box content -->
+  <div class="wrapper">
+    <div class="box">
+        <div class="box-center">
+            <img class="img-avatar" src="/style.css/img/user.jpg" alt="">
+            <h1 class="title">Mạc Đình Tuấn Anh
+                <i class=""></i>
+            </h1>
+            <p class="text-dev">Đẹp trai, nhà giàu, đi xe đẹp</p>
+            <div id="toggleBtn"></div>
+        </div>
+        <div class="box-body">
+            <div class="box-mini-fb">
+                <a href="https://www.facebook.com/tuanngu333">
+                    <img class="ing-fb" src="/style.css/img/fb.png" alt="">
+                </a>
+            </div>
+            <div class="box-mini-ytb">
+                <a href="https://www.facebook.com/tuanngu333">
+                    <img class="ing-zalo" src="/style.css/img/zalo.png" alt="">
+                </a>
+            </div>
+            <div class="box-mini-ins">
+                <a href="https://www.facebook.com/tuanngu333">
+                    <img class="ing-its" src="/style.css/img/itg.png" alt="">
+                </a>
+            </div>
+            <div class="box-mini-git">
+                <a href="https://www.facebook.com/tuanngu333">
+                    <img class="ing-git" src="/style.css/img/git.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="box-end">
+            <div class="box-fl">
+                <div class="buton-box">
+                    <div class="button-mes">
+                        <a class="button-mes-e" href="https://www.facebook.com/tuanngu333">
+                            Nhắn Tin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-fl">
+                <div class="buton-box">
+                    <div class="button-fl">
+                        <a class="button-fl-e" href="">
+                            Theo Dõi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="box-fl">
+                <div id="menu" class="footer-name">
+                    <button class="button-fl-e-tt">Thông tin
+                        <i class="ti-arrow-circle-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="box-fl">
+                <div class="footer-name-st">
+                    <button class="button-mes-e-st">Sở thích
+                        <i class="ti-arrow-circle-down"></i>
+                    </button>
+                </div>
+            </div>
+    </div>
+  </div>
+  <div class="modal-all">
+    <div class="modal-js-tt">
+        <div class="modal js-tt-icon1">
+            <div class="modal-header">
+                <header>
+                  Thông tin
+                  <i class="ti-close close-button-tt"></i>
+                </header>
+            </div>
+            <div class="noidung">
+                <P><i class="ti-book"></i> Trường: Uneti</P>
+                <p><i class="ti-calendar"></i> Năm sinh: 2003</p>
+                <p><i class="ti-id-badge"></i> Quê quán: Hải Dương</p>
+                <p><i class="ti-mobile"></i> Số điện thoại: 0328977617</p>
+                <p><i class="ti-email"></i> Email: mactuananh29@gmail.com</p>
+  
+            </div>
+        </div>
+    </div>
+    <div class="modal-js-st">
+      <div class="modal js-tt-icon2">
+          <div class="modal-header">
+              <header class="header-st">
+                Sở thích
+                <i class="ti-close close-button-st"></i>
+              </header>
+          </div>
+          <div class="noidung">
+            <p><i class="ti-desktop"></i> Sở trường: Font-End</p>
+            <p><i class="ti-game"></i> Game: Liên Minh Huyền Thoại</p>
+            <p><i class="ti-car"></i> Phương tiện: Lamborghini</p>
+            <p></p>
+            <p></p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- theme toggle button -->
+  <script>
+    const openMenus = document.querySelectorAll('.button-fl-e-tt')
+    const modal1 = document.querySelector('.modal-js-tt')
+    const modalClose1 = document.querySelector('.close-button-tt')
+
+    function showBuyTickets() {
+      modal1.classList.add('open')
+    }
+    function hideBuyTickets() {
+        modal1.classList.remove('open')
+    }
+    for (const openMenu of openMenus) {
+      openMenu.addEventListener('click', showBuyTickets)
+    }
+    modalClose1.addEventListener('click', hideBuyTickets)
+  </script>
+  <script>
+    const openMenus1 = document.querySelectorAll('.button-mes-e-st')
+    const modal2 = document.querySelector('.modal-js-st')
+    const modalClose2 = document.querySelector('.close-button-st')
+
+    function showBuyTickets() {
+      modal2.classList.add('open')
+    }
+    function hideBuyTickets() {
+        modal2.classList.remove('open')
+    }
+    for (const openMenu1 of openMenus1) {
+      openMenu1.addEventListener('click', showBuyTickets)
+    }
+    modalClose2.addEventListener('click', hideBuyTickets)
+  </script>
+  <script src="/style.css/js"></script>
+</body>
+
+</html>
