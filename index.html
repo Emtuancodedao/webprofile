@@ -16,7 +16,7 @@
   <div class="wrapper">
     <div class="box">
         <div class="box-center">
-            <img class="img-avatar" src="/style.css/img/user.jpg" alt="">
+            <img class="img-avatar" src="./style.css/img/user.jpg" alt="">
             <h1 class="title">Mạc Đình Tuấn Anh
                 <i class=""></i>
             </h1>
@@ -26,7 +26,7 @@
         <div class="box-body">
             <div class="box-mini-fb">
                 <a href="https://www.facebook.com/tuanngu333">
-                    <img class="ing-fb" src=".style.css/img/user.jpg" alt="">
+                    <img class="ing-fb" src="./style.css/img/fb.png" alt="">
                 </a>
             </div>
             <div class="box-mini-ytb">
@@ -36,7 +36,7 @@
             </div>
             <div class="box-mini-ins">
                 <a href="https://www.facebook.com/tuanngu333">
-                    <img class="ing-its" src="./style.css/img/itg.png" alt="">
+                    <img cgit init lass="ing-its" src="./style.css/img/itg.png" alt="">
                 </a>
             </div>
             <div class="box-mini-git">
@@ -151,6 +151,51 @@
     modalClose2.addEventListener('click', hideBuyTickets)
   </script>
   <script src="/style.css/js"></script>
+  <script>
+      function loadTheme() {
+	// Lấy giá trị của theme đã được lưu trong localStorage
+	// Nếu không có thì mặc định là 'light'
+	const theme = localStorage.getItem('theme') || 'light';
+
+	document.querySelector(':root').setAttribute('data-theme', theme);
+
+	// Thay đổi vị trí của nút toggle nếu là dark mode
+	if (theme !== 'light') {
+		document.getElementById('toggleBtn').classList.add('active');
+	}
+}
+
+function setTheme(isLight = true) {
+	const theme = isLight ? 'light' : 'dark';
+	localStorage.setItem('theme', theme);
+}
+  </script>
+  <script>
+      window.onload = function () {
+	loadTheme();
+
+	const themeBtn = document.getElementById('toggleBtn');
+
+	themeBtn.addEventListener('click', function () {
+		// Lấy thuộc tính data-theme
+		const root = document.querySelector(':root');
+		const isLightMode =
+			root.getAttribute('data-theme') === 'dark' ? false : true;
+
+		// toggle theme mode
+		if (isLightMode) {
+			root.setAttribute('data-theme', 'dark');
+		} else {
+			root.setAttribute('data-theme', 'light');
+		}
+
+		setTheme(!isLightMode);
+
+		// thay đổi vị trí của button
+		this.classList.toggle('active');
+	});
+};
+  </script>
 </body>
 
 </html>
