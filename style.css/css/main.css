@@ -64,12 +64,10 @@ body {
     position: absolute;
     left: 2px;
     bottom: 2px;
-  
     width: 36px;
     height: 36px;
     background-color: var(--bg-color-secondary);
     border-radius: 50%;
-  
     cursor: pointer;
     transition: all 0.35s;
   }
